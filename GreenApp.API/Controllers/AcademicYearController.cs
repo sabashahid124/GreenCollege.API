@@ -53,7 +53,7 @@ namespace GreenCollege.API.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<IActionResult> UpdateDegree(GetAcademicYearDto academicYearDto)
+        public async Task<IActionResult> UpdateAcademicYear(GetAcademicYearDto academicYearDto)
         {
             if (academicYearDto == null)
             {
@@ -66,7 +66,7 @@ namespace GreenCollege.API.Controllers
             }
             catch (Exception)
             {
-                throw new Exception($"Error occured while updating Degree {academicYearDto}.");
+                throw new Exception($"Error occured while updating the academic year.");
             }
 
             return NoContent();
