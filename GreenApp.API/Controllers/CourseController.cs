@@ -38,7 +38,7 @@ namespace GreenCollege.API.Controllers
         [HttpPost("create")]
         [ProducesResponseType(200)]
 
-        public async Task<IActionResult> AddDegree(PostCourseDto courseDto)
+        public async Task<IActionResult> AddCourse(PostCourseDto courseDto)
         {
             if (ModelState.IsValid)
             {
@@ -53,7 +53,7 @@ namespace GreenCollege.API.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<IActionResult> UpdateDegree(GetCourseDto courseDto)
+        public async Task<IActionResult> UpdateCourse(GetCourseDto courseDto)
         {
             if (courseDto == null)
             {
@@ -66,7 +66,7 @@ namespace GreenCollege.API.Controllers
             }
             catch (Exception)
             {
-                throw new Exception($"Error occured while updating Degree {courseDto}.");
+                throw new Exception($"Error occured while updating the course.");
             }
 
             return NoContent();
