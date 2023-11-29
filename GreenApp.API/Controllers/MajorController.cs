@@ -67,7 +67,7 @@ namespace GreenCollege.API.Controllers
             }
             catch (Exception)
             {
-                throw new Exception($"Error occured while updating Degree {majorDto}.");
+                throw new Exception($"Error occured while updating the major.");
             }
 
             return NoContent();
